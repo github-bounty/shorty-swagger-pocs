@@ -1,0 +1,9 @@
+{
+    "url": "https://raw.githubusercontent.com/github-bounty/shorty-swagger-pocs/main/xss-poc2.yaml",
+    "urls": [
+        {
+            "url": "https://raw.githubusercontent.com/github-bounty/shorty-swagger-pocs/main/xss-poc2.yaml",
+            "name": "XSS payload 1"
+        }
+    ]
+}
