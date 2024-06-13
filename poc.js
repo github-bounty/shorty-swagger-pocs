@@ -1,1 +1,1 @@
-alert('Dave+was+here:'+document.domain + "\n" + document.cookie);
+alert('Dave+was+here.'"\n" + window.name);
