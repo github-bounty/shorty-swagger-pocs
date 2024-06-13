@@ -3,7 +3,7 @@
     "urls": [
         {
             "url": "https://raw.githubusercontent.com/github-bounty/shorty-swagger-pocs/main/xss-fetch.yaml",
-            "name": "XSS payload"
+            "name": "XSS payload 1"
         }
     ]
 }
