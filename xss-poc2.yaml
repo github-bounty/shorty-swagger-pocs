@@ -15,7 +15,7 @@ paths:
           required: true
           type: string
           description: >
-            XSS Test: %E2%80%AE<script>prompt(55);</marquee> <hr>Injected HR</hr> 
+            XSS Test: %E2%80%AE<marquee>hello</marquee> <hr>Injected HR</hr> 
             UTF-16: \u0041\u0042\u0043\u0044\u0045
             RTLO: \u202Etest
       responses:
