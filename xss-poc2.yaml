@@ -2,7 +2,7 @@ swagger: '2.0'
 info:
   title: XSS test
   description: >
-    <math><mtext><h1><a><h6></a></h6><mglyph><svg><mtext><textarea><a title='</textarea><img src onerror="document.body.innerHTML+=`%E2%80%AE<marquee+onstart=prompt(5);>hello</marquee><hr>`"></textarea></h1>">
+    <math><mtext><h1><a><h6></a></h6><mglyph><svg><mtext><textarea><a title='</textarea><img src onerror="document.body.innerHTML+=`%E2%80%AE<marquee><marquee+onstart=prompt(5);>hello</marquee><hr>`"></textarea></h1>">
     "</textarea></desc></textarea></mtext></mtext></svg></mglyph></option></mtext></math>
   version: production
 paths:
