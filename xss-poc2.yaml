@@ -2,7 +2,7 @@ swagger: '2.0'
 info:
   title: XSS test
   description: >
-    <math><mtext><h1><a><h6></a></h6><mglyph><svg><mtext><textarea><a title='</textarea><img src onerror="document.body.innerHTML+=`<marquee>Injected</marquee><hr>`"></textarea></h1>">
+    <math><mtext><h1><a><h6></a></h6><mglyph><svg><mtext><textarea><a title='</textarea><img src onerror="document.body.innerHTML+=`%E2%80%AE<marquee>Injected</marquee><hr>`"></textarea></h1>">
     "</textarea></desc></textarea></mtext></mtext></svg></mglyph></option></mtext></math>
   version: production
 paths:
@@ -15,7 +15,7 @@ paths:
           required: true
           type: string
           description: >
-            XSS Test: %E2%80%AE<marquee>hello</marquee> <hr>Injected HR</hr> 
+            XSS Test: %E2%80%AE<marquee>Injected Marquee</marquee> <hr>Injected HR</hr> 
             UTF-16: \u0041\u0042\u0043\u0044\u0045
             RTLO: \u202Etest
       responses:
